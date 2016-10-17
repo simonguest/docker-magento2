@@ -53,3 +53,6 @@ VOLUME /var/www/html/pub
 ADD crontab /etc/cron.d/magento2-cron
 RUN chmod 0644 /etc/cron.d/magento2-cron
 RUN crontab -u www-data /etc/cron.d/magento2-cron
+
+# Run install-magento when container starts
+CMD ["install-magento"]
